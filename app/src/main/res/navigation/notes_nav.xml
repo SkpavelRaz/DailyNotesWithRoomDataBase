@@ -9,7 +9,11 @@
         android:id="@+id/homeFragment"
         android:name="com.example.notebookwithroomdatabase.fragments.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_createNotesFragment"
+            app:destination="@id/createNotesFragment" />
+    </fragment>
     <fragment
         android:id="@+id/createNotesFragment"
         android:name="com.example.notebookwithroomdatabase.fragments.CreateNotesFragment"

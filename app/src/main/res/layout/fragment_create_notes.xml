@@ -16,6 +16,8 @@
         android:padding="@dimen/_4sdp"
         android:layout_margin="@dimen/_8sdp"
         android:fontFamily="@font/rush_turbo"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -25,10 +27,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/_8sdp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
         android:background="@drawable/bg_notes_editor_layout_border_stroke"
         android:hint="@string/sub_title"
         android:padding="@dimen/_4sdp"
-        android:textSize="@dimen/_13ssp"
+        android:textSize="@dimen/_14ssp"
         android:fontFamily="@font/marigold_boutique"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -41,13 +45,41 @@
         android:layout_margin="@dimen/_8sdp"
         android:background="@drawable/bg_notes_editor_layout_border_stroke"
         android:hint="@string/notes"
-        android:padding="@dimen/_8sdp"
+        android:paddingStart="@dimen/_4sdp"
+        android:paddingTop="@dimen/_8sdp"
+        android:paddingEnd="@dimen/_4sdp"
+        android:paddingBottom="@dimen/_4sdp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
         android:gravity="start"
         android:fontFamily="@font/marigold_boutique"
-        android:textSize="@dimen/_11ssp"
+        android:textSize="@dimen/_13ssp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/et_sub_title" />
+
+    <Button
+        android:id="@+id/btn_save"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/save"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:layout_marginBottom="@dimen/_8sdp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_cancel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+    <Button
+        android:id="@+id/btn_cancel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/cancel"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:layout_marginBottom="@dimen/_16sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
