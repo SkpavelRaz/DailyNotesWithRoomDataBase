@@ -26,7 +26,8 @@ class NotesDetailsAdapter(
     }
     class NotesViewHolder(val binding:NotesShowLayoutBinding):RecyclerView.ViewHolder(binding.root)
     interface OnCardClickListener {
-        fun cardClick(id:Int)
+        fun cardClick(note:NotesModelClass)
+        fun cardDeleteClick(note:NotesModelClass)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NotesViewHolder {
@@ -46,7 +47,11 @@ class NotesDetailsAdapter(
             tvNotes.text=notes.notes
             tvDate.text=notes.date
             root.setOnClickListener {
-                notes.id?.let { id -> listener.cardClick(id) }
+                notes.let { id -> listener.cardClick(id) }
+            }
+
+            contraintDelete.setOnClickListener {
+                listener.cardDeleteClick(notes)
             }
         }
 
